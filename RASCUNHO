@@ -1,0 +1,14 @@
+function renderPokemon() {
+    for (let id = 0; id === 151; id++) {
+      useEffect(() => {
+        axios
+          .get(`https://pokeapi.co/api/v2/pokemon/${id}/`)
+          .then((response) => {
+            setPokemon(response.data)
+          })
+          .catch((error) => {
+            console.error(error)
+          })
+      }, [])
+    }
+  }
