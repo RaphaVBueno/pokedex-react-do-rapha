@@ -17,7 +17,7 @@ function PokeRender(props) {
         </div>
       </div>
       <div className="divright">
-        <h2>Dados</h2>
+        <h2>Dados </h2>
         <ul>
           {pokedata.status.map((status, index) => {
             // Passo 3: Obtenha a chave do objeto
