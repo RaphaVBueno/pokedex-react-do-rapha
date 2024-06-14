@@ -3,18 +3,20 @@ import './App.css'
 import axios from 'axios'
 import PokeRender from './components/PokeRender'
 import './poketypes.css'
+import LoadMore from './components/LoadMore'
 
 function App() {
   const [pokemon, setPokemon] = useState([])
   const [pokeinfo, setPokeinfo] = useState(false)
   const [pokedata, setPokedata] = useState()
+  const pokegen1 = 151
 
   useEffect(() => {
     const fetchPokemon = async () => {
       try {
         // Cria um array para armazenar as promessas de requisições.
         const pokemonPromises = []
-        for (let id = 1; id <= 151; id++) {
+        for (let id = 1; id <= pokegen1; id++) {
           pokemonPromises.push(
             axios.get(`https://pokeapi.co/api/v2/pokemon/${id}/`)
           )
@@ -82,6 +84,7 @@ function App() {
               </div>
             </div>
           ))}
+          <LoadMore pokemon={pokemon} setPokemon={setPokemon} />
         </div>
       )}
       {pokedata && <PokeRender pokedata={pokedata} />}

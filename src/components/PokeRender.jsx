@@ -18,6 +18,8 @@ function PokeRender(props) {
     ice: '#98d8d8',
     ghost: '#8660ad',
     dragon: '#7038f8',
+    dark: '#705848',
+    stell: '#B8B8D0',
   }
   const { pokedata } = props
   return (
