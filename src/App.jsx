@@ -49,6 +49,7 @@ function App() {
                   img: poke.sprites.other['official-artwork'].front_default,
                   height: poke.height,
                   weight: poke.weight,
+                  type: poke.types,
                   status: [
                     { 'HP ': poke.stats[0].base_stat },
                     { 'Ataque ': poke.stats[1].base_stat },
